@@ -11,61 +11,55 @@ Esse projeto tem como finalidade demonstrar conhecimentos adquiridos no curso:
 | 2      | Kinesis Data Stream <> Kinesis Data Firehose |
 | 3      | S3 bucket |
 | 4      | Glue Crawler | 
-| 5      | Glue Job |
-| 6      | Athena -> Catalog -> SQL |
+| 5      | Glue Job ETL |
+| 6      | Parquet |
+| 7      | Athena -> Catalog -> SQL |
 
 ## Tecnologias utilizadas:
-![image](https://github.com/DieGit0/northwind/assets/19257853/18de0b9b-01c0-4246-81cb-87d377ab53e6) ![image](https://github.com/DieGit0/northwind/assets/19257853/27faed64-c9e7-4add-8864-86a8aec94524) 
-![image](https://github.com/DieGit0/windfarm/assets/19257853/7737ae5c-173c-46ba-b5f4-541a1621bdd4) ![image](https://github.com/DieGit0/windfarm/assets/19257853/6ef60241-7043-4a7b-b7b8-58e0613c9aee)
-![image](https://github.com/DieGit0/windfarm/assets/19257853/ff0e061e-0d8e-4ccf-98f4-a745d6550a90)
+![image](https://github.com/DieGit0/windfarm/assets/19257853/c1dd3296-eb91-456e-b66b-5677badd7a0b)
+
 
 
 ### Data Workflow:
 - Produtores  : Três sensores simulados por aplicação python produzindo e entregando dados a cada 10s para kinesis stream <p>
 - Consumidores: kinesis data stream para coleta dos dados em tempo real <br>
-                kineses firehose para entrega dos dados particionados em bucket s3 <p>
+                kineses firehose para entrega dos dados particionados em bucket S3 <p>
 - ETL: Crawler para gerar data catalog schema e tabela <br>
        Job conversão de tipos e geração de formato parquet <p>
 - Analytics: athena para consultas ad-hoc <p>
 
 ## Imagens:<p>
 - #### 1. Produtores: <p>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/886a0d93-de6e-4d78-99b2-081e4916a66c) <p>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/ff2962a3-9ca2-4032-abde-6453115c770a) <p>
 
 - #### 2. Kinesis data stream: <p>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/b7535384-563c-41bd-8d45-fbae43bb8a67) <p>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/9431ca1c-1a27-4124-8dd7-c3bdbea59e86) <p>
 
 - #### 3. Kinesis firehose - origem e destino: <p>
- ![image](https://github.com/DieGit0/windfarm/assets/19257853/362c6a9a-70d8-4eed-bfa8-dd989e5d1ac1) <br>
- ![image](https://github.com/DieGit0/windfarm/assets/19257853/8727434b-1d5d-4e45-9975-b771b9bc2dda)
-
+ ![image](https://github.com/DieGit0/windfarm/assets/19257853/488ff3e0-3ae2-463d-acf6-e82e7923c632) <br>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/40cbee5e-4b24-454d-a3e9-0a0cb7d89ffd)
 
  - #### 4. S3 (firehose > destino): <p>
- ![image](https://github.com/DieGit0/windfarm/assets/19257853/9922ae6b-7776-4035-9d58-8a4b470fc882) <p>
-
+![image](https://github.com/DieGit0/windfarm/assets/19257853/1f6b4c81-d1cb-4d9d-9fe1-f3f2a1eeb2da) <p>
 
  - #### 5. Glue Database e tabela: <p>
- ![image](https://github.com/DieGit0/windfarm/assets/19257853/19c57e7c-c7f7-40df-ad50-980692f64d4f) <p>
-
+![image](https://github.com/DieGit0/windfarm/assets/19257853/06d70a75-058e-489d-9bcb-ad8520355e27) <p>
 
 - #### 6. Crawler: <p>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/637a8931-80dd-4d5f-bf8a-2ff2b4dc3603)<br>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/1271ee69-350b-4e75-9a5e-8cf2141ac129)<p>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/5be06831-6f2f-439a-93ea-91471e053e91) <br>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/0142ffe8-0e9c-4aab-be32-eb559f8b6047) <p>
 
 - #### 7. Data Catalog table schema: <p>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/f2d386c7-6135-483f-b9cc-52b7a71baf5d)
-
+![image](https://github.com/DieGit0/windfarm/assets/19257853/8095cacf-43b1-4697-a112-92cd9f725681) <p>
 
 - #### 8. Job ETL: <p>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/b045b96f-f496-40c8-8a71-574b354acda5) <p>
-
+![image](https://github.com/DieGit0/windfarm/assets/19257853/66086027-36f7-4ed3-899c-069fb5a2585e) <br>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/97527521-04ce-4d7d-8bde-f0630fa44aa8) <p>
 
 - #### 9. Parquet: <p>
-![image](https://github.com/DieGit0/windfarm/assets/19257853/1a04493b-2463-4c86-8474-8146917e5f98) <p>
-
+![image](https://github.com/DieGit0/windfarm/assets/19257853/5adf4798-ce65-487e-8176-60d26b1854c9) <p>
 
 - #### 10. Athena: <p>
-
-![image](https://github.com/DieGit0/windfarm/assets/19257853/18787a53-0235-4123-a9db-d37ad382816f) <p>
+![image](https://github.com/DieGit0/windfarm/assets/19257853/29a11c9e-51b4-48e7-b0fd-22f88193c5a8) <p>
 
 <p>
